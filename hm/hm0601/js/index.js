@@ -1,14 +1,13 @@
 window.onload = function () {
     var p1 = document.getElementsByClassName('p1')[0],
-        p2 = document.getElementsByClassName('p2')[0];
-    p1.addEventListener("transitionend", function (e) {
-    });
+        p2 = document.getElementsByClassName('p2')[0],
+        step_over = document.querySelector(".p1>.cancle_animation");
     setTimeout(function () {
         p1.style.opacity = 0;
-    }, 500);
+    }, 2000);
     p1.addEventListener("transitionend", function (e) {
-        p1.classList.remove("show");
-        p2.classList.add("show");
+        p1.classList.remove("show_f");
+        p2.classList.add("show_b");
         p2.style.opacity=1;
          sectionB();
     });

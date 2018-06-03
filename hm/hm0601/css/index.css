@@ -1,51 +1,185 @@
-html,body{
+html, body {
     width: 100%;
     height: 100%;
 }
-.content{
+
+.show_f {
+    display: flex !important;
+}
+
+.show_b {
+    display: block !important;
+}
+
+.content {
     position: relative;
     width: 100%;
     height: 100%;
 }
+
 /*首页*/
-.p1{
+.p1 {
+    display: none;
     position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    transition: 1s;
 }
 
+.p1 > .cancle_animation {
+    display: block;
+    position: absolute;
+    color: #999999;
+    font-size: 14px;
+    right: 10px;
+    top: 5px;
+}
 
+.p1 > .center {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
 
+.p1 > .center > .smile {
+    width: 35%;
+    margin: 0 auto;
 
+}
 
+.p1 > .center > .smile > img {
+    width: 100%;
+    opacity: 0;
+    transform: translateY(-60px);
+    animation-name: show,rotate;
+    animation-duration: .6s,1.2s;
+    animation-delay: .6s,1.8s;
+    animation-fill-mode: forwards,forwards;
+    transform-origin: center;
 
+}
 
+.p1 > .center > .date {
+    opacity: 0;
+    transform: translateY(30px);
+    width: 100%;
+    color: #aaaaaa;
+    animation: show .8s;
+    animation-fill-mode: forwards;
+}
 
+.p1 > .center > .date > span {
+    display: block;
+    margin: 5px 0;
+}
 
+.p1 > .center > .title {
+    width: 40%;
+    /*这里会合并上下边距*/
+    margin: 10px auto 0;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: show .8s;
+    animation-fill-mode: forwards;
+}
 
+.p1 > .center > .title > img {
+    width: 100%;
+}
 
+.p1 > .footer {
+    display: flex;
+    position: absolute;
+    width: 50%;
+    height: 60px;
+    bottom: 40px;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(0px);
+    animation: show .5s 1.3s;
+    animation-fill-mode: forwards;
+}
 
+.p1 > .footer > .logo {
+    height: 60px;
+    width: 60px;
+    margin-right: 10px;
+}
 
+.p1 > .footer > .logo > img {
+    height: 100%;
+}
 
+.p1 > .footer > .words > span {
+    display: block;
+    line-height: 30px;
+}
 
-
-
-
-
-
+.p1 > .footer > .words > span:last-child {
+    line-height: 30px;
+    font-size: 12px;
+}
 
 /*详情页*/
-.p2{
+.p2 {
     position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
+
 /*评价页*/
-.p3{
+.p3 {
     position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
+}
+
+/*第一页动画*/
+@keyframes show {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+}
+@keyframes rotate  {
+    0%{
+        transform: translateY(0px);
+    }
+    16% {
+        transform: rotate(30deg);
+    }
+    32% {
+        transform: rotate(-45deg);
+    }
+    48% {
+        transform: rotate(25deg);
+    }
+    64% {
+        transform: rotate(-35deg);
+    }
+    80% {
+        transform: rotate(20deg);
+    }
+    96% {
+        transform: rotate(-15deg);
+    }
+    /*70% {*/
+        /*transform: rotate(-7deg);*/
+    /*}*/
+    /*80% {*/
+        /*transform: rotate(7deg);*/
+    /*}*/
+    /*90% {*/
+        /*transform: rotate(-5deg);*/
+    /*}*/
+    100% {
+        transform: rotate(0deg);
+    }
 }
