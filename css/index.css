@@ -1,0 +1,200 @@
+body {
+    background-color: #ddd;
+}
+
+.jd_layout {
+    width: 100%;
+    height: 1500px;
+    padding-top: 40px;
+}
+
+.jd_search {
+
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 40px;
+    background-color: #F63415;
+}
+
+.jd_logo {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    background: url("../img/logo/logo2.png") no-repeat;
+    background-size: contain;
+}
+
+.search {
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 25px;
+    padding-left: 35px;
+    border: none;
+}
+
+.jd_search_box {
+    width: 100%;
+    height: 100%;
+    padding: 0 45px;
+}
+
+.jd_login {
+    color: #fff;
+    font-size: 14px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    text-align: center;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+}
+
+.jd_search_box::before {
+    content: '';
+    position: absolute;
+    width: 27px;
+    height: 25px;
+    background: url("../img/magnifies.png") no-repeat;
+    left: 52px;
+    top: 8px;
+}
+
+/* 轮播图模块自适应(屏幕) */
+.jd_banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* 容器中图片有八张，每张占满轮播图模块(屏幕) */
+.jd_banner_imgs {
+    width: 800%;
+}
+
+/* 每个图占容器的八分之一 */
+.jd_banner_imgs > li {
+    width: 12.5%;
+    float: left;
+}
+
+/* 设置图片宽度自适应父辈宽度，即屏幕宽度 */
+.jd_banner_imgs > li img {
+    width: 100%;
+    display: block;
+}
+
+/* 为了实现小圆点居中 */
+/* .flex_content{
+    width: 100%;
+} */
+.jd_banner_pointer {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    justify-content: center;
+}
+
+.jd_banner_pointer > .active {
+    background-color: #999;
+}
+
+.pointer {
+    display: block;
+    width: 3%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    float: left;
+    margin-left: 5px;
+}
+
+/* 京东八个导航小块块 */
+.jd_nav {
+    background-color: white;
+    width: 100%;
+    padding-top: 10px;
+}
+
+/* 导航里面的ul容器 */
+.jd_nav_ul {
+    width: 100%;
+}
+
+/* 容器里的八个小li */
+.jd_nav_item {
+    padding-bottom: 5px;
+    font-size: 14px;
+    text-align: center;
+    width: 25%;
+    float: left;
+}
+
+/* li里的a标签 */
+.jd_nav_item a {
+    display: block;
+    color: #333;
+}
+
+/* li里的a标签里的图片 */
+.jd_nav_item img {
+    display: block;
+    width: 50%;
+    margin: 0 auto 5px;
+}
+
+.jd_product {
+
+    margin-top: 10px;
+    width: 100%;
+}
+
+.jd_product img {
+    display: block;
+    width: 100%;
+}
+
+.jd_product_title {
+    background-color: white;
+    padding-left: 10px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    line-height: 30px;
+    width: 100%;
+    border-bottom: 1px solid #999;
+}
+
+.jd_product_title > span {
+    display: inline-block;
+    width: 4px;
+    height: 14px;
+    background-color: #F63415;
+    margin-right: 5px;
+    margin-bottom: -1px;
+}
+
+.jdp_l {
+    width: 50%;
+}
+
+.jdp_r {
+    width: 50%;
+}
+
+
+
+
+
+
+
+

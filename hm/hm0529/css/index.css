@@ -1,0 +1,147 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    background-color: #EFEFF5;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.header {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    background-color: black;
+}
+
+.header > h3 {
+    text-align: center;
+    margin: 0;
+    color: white;
+    line-height: 50px;
+}
+
+.info {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 65px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.info_content {
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+}
+
+.detail {
+    font-size: 14px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.d_title {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 20px;
+    color: #555;
+}
+
+.d_content {
+    background-color: #fff;
+    padding-left: 20px;
+    display: block;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.d_content > li {
+    padding: 0 20px;
+    display: block;
+    height: 40px;
+    border-bottom: 1px solid #aaa;
+}
+
+.d_content > li:last-of-type {
+    border-bottom: none;
+}
+
+.d_content > li > span {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 50%;
+    /*float: left;*/
+}
+
+.dc_a {
+    /*实现单行省略号*/
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    color: #555;
+    /*line-height: 40px;*/
+}
+
+.dc_b {
+    font-size: 12px;
+
+    /*实现多行换行*/
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /*white-space: nowrap;*/
+    color: #888;
+    text-align: right;
+    line-height: 14px;
+}
+
+.d_content > li > ::after {
+    content: '';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*.d_content > li > ::after {*/
+
+/*}*/
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-top: 10px;
+    border-top: 1px solid #B7BBBF;
+    border-bottom: 1px solid #B7BBBF;
+    background-color: white;
+}
+
+.footer_ul > li {
+    height: 100%;
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+.footer_ul > li > a {
+    display: block;
+    font-size: 14px;
+    color: #B7BBBF;
+}
+
+.footer_ul > li > a > img {
+    display: block;
+    margin: 0 auto;
+    width: 38%;
+}

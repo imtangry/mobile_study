@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+
+.fl {
+    float: left;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.fr {
+    float: right;
+}
+
+.content {
+    width: 100%;
+    height: 1500px;
+
+}
+
+.header {
+    width: 100%;
+    height: 60px;
+    background-color: #34394B;
+}
+
+.header > a {
+    margin-top: 15px;
+    height: 30px;
+    width: 30px;
+    display: block;
+    line-height: 30px;
+}
+
+.index_i {
+    width: 40px !important;
+    margin-left: 20px;
+}
+
+.search_i {
+    background: url("../img1/top1_1.png") no-repeat left;
+    background-size: auto 90%;
+}
+
+.notice_i {
+    margin: 0 20px;
+    background: url("../img1/top1_1.png") no-repeat -66px 1px;
+    background-size: auto 90%;
+}
+
+.cart_i {
+    margin-right: 10px;
+    background: url("../img1/top1_1.png") no-repeat -130px 1px;
+    background-size: auto 90%;
+}
+
+/*轮播图*/
+.imgs {
+    width: 100%;
+    overflow: hidden;
+}
+
+.imgs_ul {
+    width: 500%;
+}
+
+.imgs_ul > li {
+    float: left;
+    width: 20%;
+}
+
+.imgs_ul > li > a {
+    display: block;
+}
+
+.imgs_ul > li > a > img {
+    width: 100%;
+}
+
+/*banner*/
+.banner {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.banner_ul > li {
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+
+.banner_ul > li > a {
+    display: block;
+    color: black;
+}
+
+.banner_ul > li > a > img {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+/*classes*/
+.classes {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.classes_title {
+    width: 125px;
+    color: #666;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 60px;
+    background: url("../img1/star.png") no-repeat left;
+    background-size: auto 80%;
+    margin: 0 auto;
+}
+
+.classes_l {
+    width: 50%;
+}
+
+.classes_r {
+    width: 50%;
+}
+
+.classes_item {
+    width: 96%;
+    margin: 10px auto;
+
+}
+
+.classes_item > img {
+    display: block;
+    width: 100%;
+}
+
+.classes_item > span {
+    display: block;
+    font-size: 14px;
+}
+.classes_item>.classes_people{
+    font-size: 12px;
+    color: #666;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    
+    border-top: 1px solid #B7BBBF;
+    border-bottom: 1px solid #B7BBBF;
+    background-color: white;
+}
+
+.footer_ul>li{
+    width: 25%;
+    float: left;
+text-align: center;
+}
+.footer_ul > li > a {
+    display: block;
+    font-size: 14px;
+    color: #B7BBBF;
+}
+
+.footer_ul > li > a > img {
+    display: block;
+    margin: 0 auto;
+    width: 38%;
+}

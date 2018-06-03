@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rem布局</title>
+    <!--方法二：使用js-->
+    <script>
+
+            var w = document.documentElement.clientWidth;
+            document.getElementsByTagName("html")[0].style.fontSize = w / 20 + "px";
+
+
+    </script>
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+        .d1 {
+            color: white;
+            margin: 20px auto 0;
+            width: 10rem;
+            height: 10rem;
+            font-size: 1rem;
+            text-align: center;
+            padding-top: 4.5rem;
+            background-color: #683c4d;
+        }
+
+        /*方法一：使用媒体查询*/
+        /*!*小于640存在*!*/
+        /*@media (max-width: 660px) {*/
+        /*html {*/
+
+        /*font-size: 12px;*/
+        /*}*/
+
+        /*.d1 {*/
+        /*background-color: #F63415;*/
+        /*}*/
+        /*}*/
+
+        /*!*980~660存在*!*/
+        /*@media  (max-width: 1100px) and (min-width: 660px) {*/
+
+        /*html {*/
+        /*font-size: 14px;*/
+
+        /*}*/
+
+        /*.d1 {*/
+        /*background-color: #102F68;*/
+        /*}*/
+        /*}*/
+
+        /*!*大于1100存在*!*/
+        /*@media (min-width: 1100px) {*/
+        /*html {*/
+        /*font-size: 16px;*/
+        /*}*/
+
+        /*.d1 {*/
+        /*background-color: #3c9bbb;*/
+        /*}*/
+        /*}*/
+
+    </style>
+</head>
+<body>
+<div class="d1">
+    这是rem布局
+</div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>宽度自适应输入框</title>
+<link rel="stylesheet" href="http://yui.yahooapis.com/3.0.0/build/cssreset/reset-min.css">
+<style>
+.col{padding:10px;width:500px;background-color:yellow;}
+.fluid-input{display:inline-block;width:100%;_overflow:hidden;}
+.fluid-input-inner{display:block;padding-right:10px;#zoom:1;}
+.fluid-input .text, .fluid-input textarea{border:2px #ccc solid;padding:3px;width:100%;}
+.fluid-input textarea{height:300px;}
+</style>
+</head>
+
+<body>
+
+<div class="col">
+    <b class="fluid-input"><b class="fluid-input-inner"><input class="text" type="text"></b></b>
+    <b class="fluid-input"><b class="fluid-input-inner"><textarea></textarea></b></b>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.content {
+    /*background: linear-gradient(bottom, #03010F, #102F68);*/
+    background: linear-gradient(to bottom, #03010F, #102F68);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.logo {
+    margin-top: 60px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: showY 1s;
+    animation-fill-mode: forwards;
+}
+
+.l_l {
+    position: relative;
+    height: 100px;
+    width: 50%;
+    padding-right: 30px;
+
+}
+
+.l_l > span {
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-color: #F63415;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+.l_l>img{
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    height: 60% ;
+    /*动画执行次数,需要放在animation后面*/
+    transform-origin: right bottom;
+    /*animation-iteration-count:4;*/
+    animation: shake 0.5s;
+    animation-iteration-count:4;
+    animation-fill-mode: forwards;
+}
+.l_r {
+    display: flex;
+    height: 100px;
+    width: 50%;
+    text-align: left;
+    align-items: center;
+}
+
+.l_r > img {
+    height: 60%;
+}
+.words{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+.words>img:first-child{
+    height: 40px;
+    transform: translateY(50px);
+    opacity: 0;
+    animation: showY 0.7s .7s;
+    animation-fill-mode: forwards;
+}
+.words>img:last-child{
+    width: 40px;
+    transform: translateX(40px);
+    opacity: 0;
+    animation: showX 0.5s 2s;
+    animation-fill-mode: forwards;
+}
+.star{
+    width: 100%;
+    text-align: center;
+    height: 60%;
+}
+
+
+.star>img{
+    height: 100%;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: showY 0.5s 1.5s;
+    animation-fill-mode: forwards;
+}
+
+
+
+
+@keyframes showY {
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes showX {
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    10% {
+        transform: rotate(-40deg);
+    }
+    20% {
+        transform: rotate(35deg);
+    }
+    30% {
+        transform: rotate(-30deg);
+    }
+    40% {
+        transform: rotate(30deg);
+    }
+    50% {
+        transform: rotate(-30deg);
+    }
+    60% {
+        transform: rotate(20deg);
+    }
+    70% {
+        transform: rotate(-20deg);
+    }
+    80% {
+        transform: rotate(10deg);
+    }
+    90% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+

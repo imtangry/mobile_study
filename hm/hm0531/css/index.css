@@ -1,0 +1,198 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.p1 {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+.p1 > img {
+    width: 100%;
+}
+
+.p1 > .tree {
+    display: block;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 30%;
+    bottom: 40px;
+
+}
+
+.p1 > .tree > img {
+    height: 100%;
+}
+
+.p2 {
+    display: none;
+    opacity: 0;
+    transition: .3s;
+}
+
+.p2 > .header {
+    z-index: 999;
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    border-bottom: 4px solid #aaaaaa;
+    top: 0;
+    left: 0;
+}
+
+.p2 > .header > h1 {
+    margin: 0;
+    line-height: 60px;
+    text-align: center;
+}
+
+.p2 > .header > .more {
+    position: absolute;
+    top: 15px;
+    right: 8%;
+    height: 30px;
+    width: 30px;
+    background: url("../img/list.png") no-repeat center;
+
+}
+
+.p2 > .imgs {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: 70px;
+    padding-bottom: 80px;
+}
+
+.p2 > .imgs > .i_ul {
+
+    position: relative;
+    width: 800%;
+    height: 100%;
+}
+
+.p2 > .imgs > .i_ul > .iu_li {
+    float: left;
+    text-align: center;
+    height: 100%;
+    width: 12.5%;
+}
+
+.p2 > .imgs > .i_ul > .iu_li > img {
+
+    height: 100%;
+}
+
+.p2 > .imgs > .i_ul_pointer {
+    z-index: 999;
+    position: absolute;
+    bottom: 90px;
+    right: 15px;
+
+}
+
+.p2 > .imgs > .i_ul_pointer > .pointer {
+    float: left;
+    margin-left: 6px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: rgb(243, 233, 215);
+}
+
+.p_active {
+    background-color: #d09d2b !important;
+}
+
+.p2 > .footer {
+
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    border-top: 4px solid #2f5378;
+    bottom: 0;
+    left: 0;
+    padding-top: 5px;
+}
+
+.p2 > .footer > span {
+    display: inline-block;
+    width: 49%;
+    height: 30px;
+}
+
+.p2 > .footer > .up {
+    padding-top: 5px;
+
+    padding-left: 40px;
+}
+
+.p2 > .footer > .share {
+    text-align: right;
+    padding-right: 40px;
+}
+
+.p2 > .footer > span > img {
+    height: 100%;
+}
+
+.show {
+    display: block !important;
+}
+
+.p3 {
+    display: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.p3 > h1 {
+    position: absolute;
+    margin: 0;
+    height: 80px;
+    width: 100%;
+    line-height: 80px;
+}
+
+.p3 > ul {
+    width: 100%;
+    height: 100%;
+    padding-top: 80px;
+}
+
+.p3 > ul > li > a {
+    display: inline-block;
+    vertical-align: middle;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+
+}
+
+.p3 > ul > li {
+    margin-bottom: 2%;
+    height: 14%;
+    width: 100%;
+    border: 1px solid #aaaaaa;
+
+}
+
+.p3 > ul > li::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}

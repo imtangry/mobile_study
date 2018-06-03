@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拖动</title>
+    <style>
+        .d1 {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(to right, #F63415 0%, bisque 100%);
+        }
+    </style>
+</head>
+<body>
+<!--<button id="btn1">按钮</button>-->
+<div class="d1"></div>
+<script>
+    // var btn1 = document.getElementById("btn1");
+    var d1 = document.getElementsByClassName("d1")[0];
+    var startX, startY, nowX, nowY, changeX, changeY;
+
+    // function test() {
+    //     alert("点击事件");
+    // }
+    //
+    // if (document.addEventListener) {
+    //     btn1.addEventListener("click", test, false);
+    // } else {
+    //     btn1.attachEvent("onclick", test);
+    // }
+
+    d1.addEventListener("touchstart", function (e) {
+        var tt = e.targetTouches[0];
+        // console.log(e.changedTouches);
+        // console.log(e.touches);
+        // console.log(e.targetTouches);
+        startX = tt.clientX;
+        startY = tt.clientY;
+
+    })
+    d1.addEventListener("touchmove", function (e) {
+        var tt = e.targetTouches[0];
+        console.log("拖动中");
+        // console.log(e.targetTouches);
+        nowX = tt.clientX;
+        nowY = tt.clientY;
+        changeX = nowX - startX;
+        console.log(changeX);
+        console.log(changeY);
+        changeY = nowY - startY;
+        d1.style.transform = "translate("+changeX+"px,"+changeY+"px)";
+    })
+    d1.addEventListener("touchend", function () {
+        console.log("触屏结束");
+    })
+
+
+</script>
+</body>
+</html>

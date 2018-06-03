@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模拟单击事件</title>
+    <style>
+        #d1 {
+            width: 100px;
+            height: 100px;
+            background-color: #F63415;
+            margin: 20px auto 0;
+
+        }
+    </style>
+</head>
+<body>
+<div id="d1"></div>
+<script>
+    window.onload = function () {
+        // var d1 = document.getElementById("d1");
+        var ele = document.getElementById("d1");
+
+        // 可以封装一个方法
+        var eve = {
+            tap:function (ele,fn) {
+                // 判断一下
+                if(!ele||typeof ele !="object"){
+                    return;
+                }
+                var startX, startY, endX, endY;
+                ele.addEventListener("touchstart", function (e) {
+                    var tt = e.targetTouches;
+                    // 点击手指只能为一个
+                    if (tt.length > 1) {
+                        return;
+                    }
+                    // 获取初始位置
+                    startX = tt[0].clientX;
+                    startY = tt[0].clientY;
+                });
+
+                ele.addEventListener("touchend", function (e) {
+                    var ct = e.changedTouches[0];
+
+                    // 判断点击事时间
+
+
+                    // 判断手指移动距离
+                    endX = ct.clientX;
+                    endY = ct.clientY;
+                    console.log(endY-startY);
+                    console.log(endX-startX);
+                    if(Math.abs(endY-startY)<20&&Math.abs(endX-startX)<20){
+
+                        // 回调函数:点击完之后执行的函数
+                        fn&&fn(e);
+                        return;
+                    }
+
+                })
+
+            }
+        }
+
+        eve.tap(ele,function () {
+            alert("点击事件");
+        })
+
+    }
+</script>
+</body>
+</html>
