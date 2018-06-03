@@ -1,19 +1,22 @@
 window.onload = function () {
-    /*var p1 = document.getElementsByClassName('p1')[0],
+    var p1 = document.getElementsByClassName('p1')[0],
         p2 = document.getElementsByClassName('p2')[0],
         step_over = document.querySelector(".p1>.cancle_animation");
+    // 页面一和页面二的跳转
     setTimeout(function () {
         p1.style.opacity = 0;
     }, 3500);
     p1.addEventListener("transitionend", function (e) {
         p1.classList.remove("show_f");
         p2.classList.add("show_b");
-        p2.style.opacity=1;
-         sectionB();
-    });*/
+        p2.style.opacity = 1;
+        sectionB();
+    });
+
+
     //快捷测试第二个页面
-    var  p2 = document.getElementsByClassName('p2')[0];
-    sectionB();
+    // var  p2 = document.getElementsByClassName('p2')[0];
+    // sectionB();
 
     function sectionB() {
         // 实现拖动的主要变量
@@ -29,7 +32,7 @@ window.onload = function () {
             index = 0,
             position = 0,
             pointers = document.getElementsByClassName("pointer"),
-            pl = pointers.length-1,
+            pl = pointers.length - 1,
             interval;
 
         // 借用之前的代码，这里公共的位置判断应该全部用一个
@@ -48,7 +51,7 @@ window.onload = function () {
             console.log(changeX);
             if ((itemX + changeX) > animateMax) {
                 console.log("a");
-                img_ul.style.transform = "translateX(" + animateMax+ "px)";
+                img_ul.style.transform = "translateX(" + animateMax + "px)";
                 itemX = animateMax;
                 changeX = 0;
                 // ccul.style.top = itemY + "px";
@@ -68,32 +71,32 @@ window.onload = function () {
         img_ul.addEventListener("touchend", function (e) {
             // 实现回弹
             itemX = itemX + changeX;
-            console.log("itemX:"+itemX);
-            var distance = itemX/width;
-            console.log("distance:"+distance);
+            console.log("itemX:" + itemX);
+            var distance = itemX / width;
+            console.log("distance:" + distance);
             var indexNext = -Math.round(distance);
-            console.log("indexNext:"+indexNext);
+            console.log("indexNext:" + indexNext);
             index = indexNext;
-            if(indexNext==0){
+            if (indexNext == 0) {
                 index = 0;
             }
-            if(indexNext>pl){
+            if (indexNext > pl) {
                 index = pl;
             }
             // 使用完itemX之后需要把他重置一下
-            itemX=-index*width;
-            console.log("index:"+index);
-            console.log("itemX:"+itemX);
+            itemX = -index * width;
+            console.log("index:" + index);
+            console.log("itemX:" + itemX);
             img_ul.style.transition = ".5s";
             img_ul.style.transform = "translateX(" + (itemX) + "px)";
             // 修改小点点
-            for (var j = 0; j < pl+1; j++) {
+            for (var j = 0; j < pl + 1; j++) {
                 // console.log(pointers);
                 // console.log(j);
                 // console.log(pointers[0]);
                 pointers[j].classList.remove("p_active");
             }
-            pointers[pl-index].classList.add("p_active");
+            pointers[pl - index].classList.add("p_active");
             roll();
 
             // if (itemX > max) {
@@ -150,49 +153,95 @@ window.onload = function () {
             interval = setInterval(function () {
                 move();
             }, 3000);
+
             function move() {
                 // 可以解决第一次执行事件翻倍的bug
                 index++;
-                if (index == pl+1) {
+                if (index == pl + 1) {
                     index = 0;
                 }
                 position = -index * width;
                 console.log(position);
                 img_ul.style.transition = ".5s";
                 img_ul.style.transform = "translateX(" + position + "px)";
-                for (var j = 0; j < pl+1; j++) {
+                for (var j = 0; j < pl + 1; j++) {
                     // console.log(pointers);
                     // console.log(j);
                     // console.log(pointers[0]);
                     pointers[j].classList.remove("p_active");
                 }
-                pointers[pl-index].classList.add("p_active");
-                itemX = -index*width;
+                pointers[pl - index].classList.add("p_active");
+                itemX = -index * width;
 
             }
         }
     }
 
-/*var click = document.getElementsByClassName('more')[0],
-    p3=document.getElementsByClassName("p3")[0];
+    /*var click = document.getElementsByClassName('more')[0],
+        p3=document.getElementsByClassName("p3")[0];
+
+    // 点击切换
+    eve.tap(click,function () {
+        p2.classList.remove("show");
+        p3.classList.add("show");
+    });*/
+// 页面二的的点击进入评分界面
+// 点击评分
+    var click = document.getElementsByClassName("watched")[0],
+        p3 = document.getElementsByClassName("p3")[0];
 
 // 点击切换
-eve.tap(click,function () {
-    p2.classList.remove("show");
-    p3.classList.add("show");
-});*/
+    eve.tap(click, function () {
+        // 其中有一个动画效果
+        p2.style.opacity = 0;
+        p2.addEventListener("transitionend", function () {
+            p2.classList.remove("show_b");
+            p3.classList.add("show_b");
+            p3.style.opacity = 1;
+            sectionC()
+        })
 
-// // 点击评分
-// var click = document.getElementsByClassName("watched")[0];
-// // 点击切换
-//     eve.tap(click,function () {
-//         p2.classList.remove("show");
-//         p3.classList.add("show");
-//     });
+    });
+function sectionC() {
+    // 实现小心心
+    var li_star = document.querySelectorAll(".p3>.content>nav");
+    var c_value = ["很差", "失望", "一般", "良好", "很好"];
+    // 循环li里的小心心
+    for (var i = 0; i < li_star.length; i++) {
+        var stars = li_star[i].querySelectorAll("span");
+        // 给小心心加下标
+        // 循环添加时间的循环里拿的stars一直是最后的starts，有bug
+        // 可以加一个自执行的匿名函数，保存一下stars
+        var input = li_star[i].querySelectorAll("input")[0];
+        (function (stars, input) {
+            for (var j = 0; j < stars.length; j++) {
+                stars[j].index = j;
+                stars[j].linow = i;
+                // 添加触摸事件
+                stars[j].addEventListener("touchstart", function (e) {
+                    input.value = c_value[e.target.index];
+                    console.log(e.target.index);
+                    console.log(e.target.linow);
+                    console.log(e.target.parentNode);
+                    var as = e.target.parentNode.getElementsByTagName("a");
+                    //清除所有的星号的active样式,会有最后一行的bug
+                    for (var m = 0; m < stars.length; m++) {
+                        console.log(this.linow);
 
+                        if (m <= this.index) {
+                            //将当前点击的a设置为active样式
+                            console.log(this.linow);
+                            console.log(stars);
+                            stars[m].classList.add("star_active");
+                        } else {
+                            stars[m].classList.remove("star_active");
+                        }
+                    }
+                })
+            }
+        })(stars, input);
 
-
-
-
+    }
+}
 
 }
