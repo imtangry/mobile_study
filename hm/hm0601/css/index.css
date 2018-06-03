@@ -244,7 +244,6 @@ html, body {
 }
 
 .p2 > .detail > .d_r > .star {
-
     display: block;
     margin: 10px 0;
     width: 65%;
@@ -292,17 +291,7 @@ html, body {
     width: 100%;
 }
 
-/*.p2 > .performers > .performer > a {*/
-/*display: block;*/
-/*color: #888888;*/
-/*text-overflow: ellipsis;*/
-/*white-space: nowrap;*/
-/*overflow: hidden;*/
-/*}*/
 
-/*.p2 > .performers > .performer > span {*/
-/*color: #cccccc;*/
-/*}*/
 
 /*详情页面下的提交按钮*/
 .p2 > .btns {
@@ -332,7 +321,81 @@ html, body {
     overflow: hidden;
 }
 .p3>.header{
+padding: 10px 10px 0;
+}
+.p3>.header>.submit{
+    text-align: center;
+    width: 60px;
+    padding: 7px 0;
+    background-color: #f3a520;
+    font-size: 14px;
+    color: white;
+    border-radius: 2px;
+}
 
+.p3>.content{
+    text-align: center;
+    padding: 0 50px;
+}
+.p3>.content>h1{
+    font-size: 24px;
+    margin: 15px 0;
+    text-decoration: underline;
+}
+.p3>.content>nav>.star{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 4px;
+    background: url("../img/star.png") no-repeat right;
+    background-size: auto 100%;
+}
+.p3>.content>span{
+    font-size: 12px;
+    display: block;
+    margin: 10px 0;
+}
+.p3 >.content>.tags {
+    padding: 10px 0 0 0;
+
+}
+
+.p3 >.content> .tags > h2 {
+    color: #444;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.p3 > .content>.tags > label input {
+    display: none;
+}
+
+.p3 >.content> .tags > label span {
+    font-size: 14px;
+    color: #444;
+    float: left;
+    border: 1px solid #cdd6e1;
+    padding: 4px 10px;
+    border-radius: 26px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.p3 >.content> .tags input:checked + span {
+    border: 1px solid #3c9bbb;
+    background: #3c9bbb;
+    color: #fff;
+}
+.p3 >.content>textarea{
+    display: block;
+    border: 1px solid #cccccc;
+    width: 100%;
+    margin: 2px;
+}
+
+
+.star_active{
+    background-position-x:0!important;
 }
 
 /*第一页动画*/
