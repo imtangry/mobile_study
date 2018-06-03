@@ -55,10 +55,10 @@ html, body {
     width: 100%;
     opacity: 0;
     transform: translateY(-60px);
-    animation-name: show,rotate;
-    animation-duration: .6s,1.2s;
-    animation-delay: .6s,1.8s;
-    animation-fill-mode: forwards,forwards;
+    animation-name: show, rotate;
+    animation-duration: .6s, 1.2s;
+    animation-delay: .6s, 1.8s;
+    animation-fill-mode: forwards, forwards;
     transform-origin: center;
 
 }
@@ -132,8 +132,198 @@ html, body {
     overflow: hidden;
 }
 
+/*详情页下面的轮播图*/
+.imgs {
+    position: relative;
+    width: 100%;
+    height: 30%;
+}
+
+.imgs > .i_ul {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 500%;
+    height: 100%;
+}
+
+.imgs > .i_ul > .iu_li {
+    float: left;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+}
+
+.imgs > .i_ul > .iu_li > img {
+    /*width: 100%;*/
+    height: 100%;
+}
+
+.i_title {
+    position: absolute;
+    width: 50%;
+    font-size: 16px;
+    color: white;
+    padding-left: 20px;
+    bottom: 20px;
+    z-index: 2;
+}
+
+.p3 {
+    width: 100%;
+    height: 100%;
+}
+
+.i_ul_pointer {
+    position: absolute;
+    width: 50%;
+    padding-right: 20px;
+    right: 0px;
+    bottom: 20px;
+}
+
+.i_ul_pointer > .pointer {
+    float: right;
+    width: 6px;
+    height: 6px;
+    margin-right: 10px;
+    background-color: #aaaaaa;
+    border-radius: 50%;
+}
+
+.p_active {
+    background-color: white !important;
+}
+
+/*详情页下的电影详情*/
+/*还是使用flex吧,但是主轴对应边框长度不能设置了*/
+.p2 > .detail {
+    /*display: flex;*/
+    position: relative;
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 20px;
+    /*align-items: center;*/
+    /*justify-content: space-between;*/
+}
+
+.p2 > .detail > .d_l {
+    padding-right: 135px;
+
+}
+
+.p2 > .detail > .d_l > p {
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+/*这个可以用flex*/
+.p2 > .detail > .d_r {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    width: 130px;
+    height: 130px;
+    background-color: #d8eebc;
+    box-shadow: 4px 4px 5px #444;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.p2 > .detail > .d_r > span {
+    display: block;
+}
+
+.p2 > .detail > .d_r > .score {
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.p2 > .detail > .d_r > .star {
+
+    display: block;
+    margin: 10px 0;
+    width: 65%;
+}
+
+.p2 > .detail > .d_r > .star > img {
+    width: 100%;
+}
+
+/*.p2 > .detail > .d_r > nav > span {*/
+/*display: block;*/
+/*float: left;*/
+/*margin-right: 3px;*/
+/*width: 15px;*/
+/*height: 15px;*/
+/*background: url("../img/star.png") no-repeat right;*/
+/*background-size: auto 100%;*/
+
+/*}*/
+
+/*详情页面下的演员详情*/
+.p2 > .performers {
+    position: relative;
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 20px;
+
+}
+
+.p2 > .performers > span {
+    display: block;
+    color: #666666;
+    margin-bottom: 5px;
+}
+
+.p2 > .performers > .performer {
+    float: left;
+    text-align: center;
+    width: 24%;
+    margin-right: 1%;
+}
+
+.p2 > .performers > .performer > img {
+    display: block;
+    width: 100%;
+}
+
+/*.p2 > .performers > .performer > a {*/
+/*display: block;*/
+/*color: #888888;*/
+/*text-overflow: ellipsis;*/
+/*white-space: nowrap;*/
+/*overflow: hidden;*/
+/*}*/
+
+/*.p2 > .performers > .performer > span {*/
+/*color: #cccccc;*/
+/*}*/
+
+/*详情页面下的提交按钮*/
+.p2 > .btns {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    padding: 10px 20px 0;
+}
+
+.p2 > .btns > span {
+    padding: 0 45px;
+    font-size: 14px;
+    color: #ffca31;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #ffca31;
+    border-radius: 2px;
+}
+
 /*评价页*/
 .p3 {
+    display: none;
     position: relative;
     width: 100%;
     height: 100%;
@@ -148,8 +338,9 @@ html, body {
     }
 
 }
-@keyframes rotate  {
-    0%{
+
+@keyframes rotate {
+    0% {
         transform: translateY(0px);
     }
     16% {
@@ -164,22 +355,27 @@ html, body {
     64% {
         transform: rotate(-35deg);
     }
-    80% {
+    72% {
         transform: rotate(20deg);
     }
-    96% {
+    80% {
         transform: rotate(-15deg);
     }
+    88% {
+        transform: rotate(8deg);
+    }
     /*70% {*/
-        /*transform: rotate(-7deg);*/
+    /*transform: rotate(-7deg);*/
     /*}*/
     /*80% {*/
-        /*transform: rotate(7deg);*/
+    /*transform: rotate(7deg);*/
     /*}*/
     /*90% {*/
-        /*transform: rotate(-5deg);*/
+    /*transform: rotate(-5deg);*/
     /*}*/
     100% {
         transform: rotate(0deg);
     }
 }
+
+

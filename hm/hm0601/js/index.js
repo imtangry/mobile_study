@@ -1,17 +1,19 @@
 window.onload = function () {
-    var p1 = document.getElementsByClassName('p1')[0],
+    /*var p1 = document.getElementsByClassName('p1')[0],
         p2 = document.getElementsByClassName('p2')[0],
         step_over = document.querySelector(".p1>.cancle_animation");
     setTimeout(function () {
         p1.style.opacity = 0;
-    }, 2000);
+    }, 3500);
     p1.addEventListener("transitionend", function (e) {
         p1.classList.remove("show_f");
         p2.classList.add("show_b");
         p2.style.opacity=1;
          sectionB();
-    });
-
+    });*/
+    //快捷测试第二个页面
+    var  p2 = document.getElementsByClassName('p2')[0];
+    sectionB();
 
     function sectionB() {
         // 实现拖动的主要变量
@@ -91,7 +93,7 @@ window.onload = function () {
                 // console.log(pointers[0]);
                 pointers[j].classList.remove("p_active");
             }
-            pointers[index].classList.add("p_active");
+            pointers[pl-index].classList.add("p_active");
             roll();
 
             // if (itemX > max) {
@@ -149,6 +151,11 @@ window.onload = function () {
                 move();
             }, 3000);
             function move() {
+                // 可以解决第一次执行事件翻倍的bug
+                index++;
+                if (index == pl+1) {
+                    index = 0;
+                }
                 position = -index * width;
                 console.log(position);
                 img_ul.style.transition = ".5s";
@@ -159,27 +166,29 @@ window.onload = function () {
                     // console.log(pointers[0]);
                     pointers[j].classList.remove("p_active");
                 }
-                pointers[index].classList.add("p_active");
+                pointers[pl-index].classList.add("p_active");
                 itemX = -index*width;
-                index++;
-                if (index == pl+1) {
-                    index = 0;
-                }
+
             }
         }
     }
 
-var click = document.getElementsByClassName('more')[0],
+/*var click = document.getElementsByClassName('more')[0],
     p3=document.getElementsByClassName("p3")[0];
 
 // 点击切换
 eve.tap(click,function () {
     p2.classList.remove("show");
     p3.classList.add("show");
-});
+});*/
 
-
-
+// // 点击评分
+// var click = document.getElementsByClassName("watched")[0];
+// // 点击切换
+//     eve.tap(click,function () {
+//         p2.classList.remove("show");
+//         p3.classList.add("show");
+//     });
 
 
 

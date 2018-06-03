@@ -10,7 +10,7 @@
 <body>
 <section class="content ">
     <!--首页-->
-    <section class="p1 show_f">
+    <section class="p1 ">
         <span class="cancle_animation">
             跳过
         </span>
@@ -24,19 +24,84 @@
             </div>
             <div class="title"><img src="./img/movies.png" alt=""></div>
         </div>
-        <div class="footer"><div class="logo"><img src="./img/logo.png" alt=""></div><div class="words"><span>我们的精神角落</span><span>豆瓣 4.14.1</span></div></div>
+        <div class="footer">
+            <div class="logo"><img src="./img/logo.png" alt=""></div>
+            <div class="words"><span>我们的精神角落</span><span>豆瓣 4.14.1</span></div>
+        </div>
     </section>
     <!--详情-->
-    <section class="p2">
+    <section class="p2 show_b">
+        <!--轮播图-->
+        <!--这个可以结合css，js单独封装成一个功能了-->
+        <section class="imgs">
+            <span class="i_title">盗梦空间</span>
+            <ul class="i_ul clear">
+                <li class="iu_li"><img src="img/1.jpg" alt=""></li>
+                <li class="iu_li"><img src="img/2.jpg" alt=""></li>
+                <li class="iu_li"><img src="img/3.jpg" alt=""></li>
+                <li class="iu_li"><img src="img/4.jpg" alt=""></li>
+                <li class="iu_li"><img src="img/5.jpg" alt=""></li>
+            </ul>
+            <ul class="i_ul_pointer clear">
+                <li class="pointer"></li>
+                <li class="pointer"></li>
+                <li class="pointer"></li>
+                <li class="pointer"></li>
+                <li class="pointer p_active"></li>
+            </ul>
+        </section>
+        <!--电影详情-->
+        <div class="detail clear">
+            <div class="d_l fl">
+                <h3>盗梦空间</h3>
+                <p>2010/美国/英国/剧情/动作/科幻</p>
+                <p>原名：Inception</p>
+                <p>上映时间：2010-09-01/(中国大陆)</p>
+                <p>片长：148分钟</p>
+            </div>
+            <div class="d_r fr">
+                <span class="score">9.2</span>
+                <span class="star"><img src="./img/score.png" alt=""></span>
+                <!--<nav><span class="star"></span><span class="star"></span><span class="star"></span><span-->
+                        <!--class="star"></span><span class="star"></span></nav>-->
+                <span class="people_num">723469人</span>
+            </div>
+        </div>
+        <!--演员详情-->
+        <div class="performers clear">
+            <span>影人</span>
+            <div class="performer">
+                <img src="./img/actor-1.png" alt="">
+                <!--<a href="#">克里斯托弗·芭芭拉</a>-->
+                <!--<span>导演</span>-->
+            </div>
+            <div class="performer">
+                <img src="./img/actor-2.png" alt="">
+            </div>
+            <div class="performer">
+                <img src="./img/actor-3.png" alt="">
+            </div>
+            <div class="performer"><img src="./img/actor-4.png" alt=""></div>
+        </div>
+        <!--提交按钮-->
+        <div class="btns clear">
+            <span class="want fl">想看</span>
+            <span class="watched fr">看过 ☆☆☆☆☆</span>
+        </div>
 
     </section>
+
     <!--评分-->
-    <section class="p3"></section>
+    <section class="p3">
+        <div class="header">
+            <span class="cancle"></span>
+            <span class="submit">提交</span>
+        </div>
+
+    </section>
 </section>
-
 <script src="./js/tap.js"></script>
-<script src="./js/tap.js"></script>
-
+<script src="./js/index.js"></script>
 </body>
 
 </html>
