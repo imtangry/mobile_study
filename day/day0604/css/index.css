@@ -48,6 +48,9 @@ h6 {
   visibility: hidden;
 }
 /* 这个length/rem可以保证原图中各个组件的宽高比例,*/
+.red {
+  color: red !important;
+}
 .header {
   width: 100%;
   height: 2.93333333rem;
@@ -67,7 +70,7 @@ h6 {
   width: 2rem;
   height: 2rem;
   background: url("../img/icon.png") no-repeat 0rem 0rem;
-  background-size: 2rem 26.66666667rem;
+  background-size: 100% auto;
 }
 .header .sign_out {
   height: 2rem;
@@ -83,10 +86,128 @@ h6 {
   width: 2rem;
   height: 2rem;
   background: url("../img/icon.png") no-repeat 0rem -2rem;
-  background-size: 2rem 26.66666667rem;
+  background-size: 100% auto;
 }
 .header .sign_out span {
   display: inline-block;
   color: #fff;
+}
+.header .logo {
+  text-align: center;
+  height: 2.93333333rem;
+}
+.header .logo img {
+  height: 100%;
+}
+.info {
+  color: white;
+  text-align: center;
+  height: 13.33333333rem;
+  background: url("../img/ingoBg.png") no-repeat;
+  background-size: cover;
+  padding: 2rem;
+}
+.info .header_img {
+  width: 6rem;
+  height: 6rem;
+  margin: 0 auto 0.83333333rem;
+  border-radius: 50%;
+  border: 0.1rem solid white;
+  overflow: hidden;
+}
+.info .header_img img {
+  height: 100%;
+}
+.info .user_name {
+  height: 1.93333333rem;
+}
+.info .user_name span {
+  display: inline-block;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+.info .user_name img {
+  height: 40%;
+  display: inline-block;
+  margin-top: 0.16666667rem;
+  vertical-align: middle;
+}
+.info .reg_time {
+  color: #aaa;
+  font-size: 0.6rem;
+}
+/* 个人资料 */
+.info_option {
+  width: 100%;
+  height: 2.66666667rem;
+  padding-left: 1.13333333rem;
+  line-height: 2.66666667rem;
+  color: #aaaaaa;
+  border-bottom: 0.03333333rem solid #cccccc;
+}
+.info_option .list {
+  display: grid;
+  height: 11.63333333rem;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 0.03333333rem solid #aaaaaa;
+}
+.info_option .list a {
+  display: block;
+  padding-top: 1.33333333rem;
+  font-size: 0.8rem;
+  color: #738797;
+}
+.info_option .list a i {
+  display: block;
+  margin: 0 auto 0.73333333rem;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.info_option .list a span {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.info_option .list a:nth-child(1) i {
+  background: url("../img/icon.png") no-repeat 0rem -3.2rem;
+  background-size: 100% auto;
+}
+.info_option .list a:nth-child(2) i {
+  background: url("../img/icon.png") no-repeat 0rem -4.8rem;
+  background-size: 100% auto;
+}
+.info_option .list a:nth-child(3) i {
+  background: url("../img/icon.png") no-repeat 0rem -6.4rem;
+  background-size: 100% auto;
+}
+.info_option .list a:nth-child(4) i {
+  background: url("../img/icon.png") no-repeat 0rem -8rem;
+  background-size: 100% auto;
+}
+.info_option .list a:nth-child(5) i {
+  background: url("../img/icon.png") no-repeat 0rem -9.6rem;
+  background-size: 100% auto;
+}
+.info_option .list a:nth-child(6) i {
+  background: url("../img/icon.png") no-repeat 0rem -11.2rem;
+  background-size: 100% auto;
+}
+.info_option .list a:nth-child(7) i {
+  background: url("../img/icon.png") no-repeat 0rem -12.8rem;
+  background-size: 100% auto;
+}
+.info_option .list a:nth-child(8) i {
+  background: url("../img/icon.png") no-repeat 0rem -14.4rem;
+  background-size: 100% auto;
+}
+/* 安全警告 */
+.safety {
+  width: 100%;
+  height: 3.16666667rem;
+  padding-left: 1.13333333rem;
+  line-height: 3.16666667rem;
+  color: #aaaaaa;
+  border-bottom: 0.03333333rem solid #cccccc;
 }
 /*# sourceMappingURL=index.css.map */

@@ -1,10 +1,14 @@
 @import "common";
 /* 这个length/rem可以保证原图中各个组件的宽高比例,*/
 
-
 .top_bg(@x,@y) {
   background: url("../img/icon.png") no-repeat @x/@rem @y/@rem;
-  background-size: 60/@rem 800/@rem;
+  //background-size: 60/@rem 800/@rem;
+  background-size: 100% auto;
+}
+
+.red {
+  color: red !important;
 }
 
 .header {
@@ -46,4 +50,144 @@
       color: #fff;
     }
   }
+  .logo {
+    text-align: center;
+    height: 88/@rem;
+    img {
+      height: 100%
+    }
+  }
+
+}
+
+.info {
+  color: white;
+  text-align: center;
+  height: 400/@rem;
+  background: url("../img/ingoBg.png") no-repeat;
+  background-size: cover;
+  padding: 60/@rem;
+  .header_img {
+    width: 180/@rem;
+    height: 180/@rem;
+    margin: 0 auto 25/@rem;
+    border-radius: 50%;
+    border: 3/@rem solid white;
+    overflow: hidden;
+    img {
+      height: 100%;
+    }
+  }
+  .user_name {
+    height: 58/@rem;
+    span {
+      display: inline-block;
+      font-size: 30/@rem;
+      vertical-align: middle;
+    }
+    img {
+      height: 40%;
+      display: inline-block;
+      margin-top: 5/@rem;
+      vertical-align: middle;
+    }
+  }
+  .reg_time {
+    color: #aaa;
+    font-size: 18/@rem;
+  }
+}
+
+//最下面两个块可以重用的样式
+.title(@height) {
+  height: @height/@rem;
+  padding-left: 34/@rem;
+  line-height: @height/@rem;
+  color: #aaaaaa;
+  border-bottom: 1/@rem solid #cccccc;
+}
+
+/* 个人资料 */
+.info_option {
+  width: 100%;
+  .title(80);
+  .list {
+    display: grid;
+    height: 349/@rem;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1/@rem solid #aaaaaa;
+
+    a {
+      display: block;
+      padding-top: 40/@rem;
+      font-size: 24/@rem;
+      color: #738797;
+
+      i {
+        display: block;
+        margin: 0 auto 22/@rem;
+        width: 48/@rem;
+        height: 48/@rem;
+      }
+
+      span {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    a:nth-child(1) {
+      i {
+        .top_bg(0, -48*2)
+      }
+    }
+    a:nth-child(2) {
+      i {
+        .top_bg(0, -48*3)
+      }
+    }
+    a:nth-child(3) {
+      i {
+        .top_bg(0, -48*4)
+      }
+    }
+    a:nth-child(4) {
+      i {
+
+        .top_bg(0, -48*5)
+      }
+    }
+    a:nth-child(5) {
+      i {
+        .top_bg(0, -48*6)
+      }
+    }
+    a:nth-child(6) {
+      i {
+        .top_bg(0, -48*7)
+      }
+    }
+    a:nth-child(7) {
+      i {
+        .top_bg(0, -48*8)
+      }
+    }
+    a:nth-child(8) {
+      i {
+        .top_bg(0, -48*9)
+      }
+    }
+
+  }
+}
+
+/* 安全警告 */
+.safety {
+  width: 100%;
+  .title(95);
+
+
+
 }
