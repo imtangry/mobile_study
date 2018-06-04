@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        var pxRatio=1/window.devicePixelRatio;
+        var html = document.documentElement;
+        //alert(html.clientWidth);
+        document.write('<meta name="viewport" ' +
+            'content="width=device-width,user-scalable=no,' +
+            'initial-scale='+pxRatio+',maximum-scale='+pxRatio+',' +
+            'minimum-scale='+pxRatio+'">');
+        html.style.fontSize=html.clientWidth/25+"px";
+        // alert(html.clientWidth);
+    </script>
+    <meta charset="UTF-8">
+    <title>QQ练习</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+<header class="header">
+    <div class="logo"><i></i></div>
+    <span>消息</span>
+    <div class="add"><i></i></div>
+</header>
+<section class="search">
+    <input type="text" placeholder="搜索">
+</section>
+<section class="messages">
+    <div class="msg">
+        <div class="msg_from"></div>
+        <div class="msg_detail">
+            <span>我的电脑</span>
+            <span>[图片]章节下边 有更多的练习，练习做</span>
+        </div>
+        <div class="msg_property">
+            <span>14:47</span>
+            <span class="nums">40</span>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    div
+</footer>
+</body>
+</html>

@@ -1,0 +1,110 @@
+/* 重置样式 */
+html,
+body,
+ul,
+li,
+img,
+p,
+form,
+input {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 0.86666667rem;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+input {
+  outline: none;
+  border: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clear::after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+.header {
+  width: 100%;
+  height: 3.5rem;
+  text-align: center;
+  background: -webkit-linear-gradient(left, #4B8FFA, #32BCFD);
+}
+.header .logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 3.5rem;
+  padding-left: 0.66666667rem;
+}
+.header .logo i {
+  display: inline-block;
+  height: 3.5rem;
+  width: 3.5rem;
+  background: url("../img/QQ_r2_c2.jpg") no-repeat;
+  background-size: contain;
+}
+.header .add {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-top: 0.96666667rem;
+  padding-right: 0.83333333rem;
+}
+.header .add i {
+  display: inline-block;
+  height: 1.56666667rem;
+  width: 1.56666667rem;
+  background: url("../img/QQ_r3_c13.jpg") no-repeat;
+  background-size: cover;
+}
+.header span {
+  display: inline-block;
+  height: 3.5rem;
+  font-size: 1.13333333rem;
+  line-height: 3.5rem;
+  color: white;
+}
+.search {
+  width: 100%;
+  height: 3rem;
+  padding: 0.4rem 0.83333333rem;
+}
+.search input {
+  display: block;
+  width: 23.26666667rem;
+  height: 2.06666667rem;
+  text-align: center;
+  font-size: 0.9rem;
+  background-color: #eeeeee;
+}
+.search input::-webkit-input-placeholder {
+  color: #A2A2A2;
+}
+.messages {
+  width: 100%;
+}
+/*# sourceMappingURL=index.css.map */
