@@ -19,6 +19,9 @@ body {
   text-decoration: none;
   line-height: 50px;
 }
+.main nav .content a:hover {
+  background-color: #683c4d;
+}
 .main nav .content .left {
   float: left;
 }
