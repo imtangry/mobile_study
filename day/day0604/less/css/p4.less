@@ -1,37 +1,41 @@
 //匹配模式
-.btn(@_,@bgc:white){
-  background-color: @bgc;
+/* 这是注释 */
+.btn(@_,@bgc:#ccc) {
+  background-color: #000000;
   height: 40px;
   width: 70px;
   line-height: 40px;
-  color: #2f5378;
+  color: white;
   font-size: 14px;
   border-radius: 2px;
   margin-top: 20px;
+  text-align: center;
 }
 
-.btn(submit){
+.btn(submit) {
   background-color: #3c9bbb;
 }
 
-.btn(cancle){
+.btn(cancle) {
   background-color: #BB4D46;
 }
 
-.btn(info){
+.btn(info) {
   background-color: cornflowerblue;
 }
 
-
-.button:nth-child(1){
+.button:nth-child(1) {
   .btn(submit);
 }
-.button:nth-child(2){
+
+.button:nth-child(2) {
   .btn(info);
 }
-.button:nth-child(3){
+
+.button:nth-child(3) {
   .btn(cancle);
 }
-.button:nth-child(4){
+
+.button:nth-child(4) {
   .btn(submit);
 }
