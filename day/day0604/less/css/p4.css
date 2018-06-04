@@ -1,0 +1,45 @@
+.button:nth-child(1) {
+  background-color: white;
+  height: 40px;
+  width: 70px;
+  line-height: 40px;
+  color: #2f5378;
+  font-size: 14px;
+  border-radius: 2px;
+  margin-top: 20px;
+  background-color: #3c9bbb;
+}
+.button:nth-child(2) {
+  background-color: white;
+  height: 40px;
+  width: 70px;
+  line-height: 40px;
+  color: #2f5378;
+  font-size: 14px;
+  border-radius: 2px;
+  margin-top: 20px;
+  background-color: cornflowerblue;
+}
+.button:nth-child(3) {
+  background-color: white;
+  height: 40px;
+  width: 70px;
+  line-height: 40px;
+  color: #2f5378;
+  font-size: 14px;
+  border-radius: 2px;
+  margin-top: 20px;
+  background-color: #BB4D46;
+}
+.button:nth-child(4) {
+  background-color: white;
+  height: 40px;
+  width: 70px;
+  line-height: 40px;
+  color: #2f5378;
+  font-size: 14px;
+  border-radius: 2px;
+  margin-top: 20px;
+  background-color: #3c9bbb;
+}
+/*# sourceMappingURL=p4.css.map */
