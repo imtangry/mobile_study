@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+}
+.main {
+  background-color: #cccccc;
+  width: 100%;
+  margin: 0 auto;
+}
+.main nav {
+  height: 50px;
+  background-color: #3c9bbb;
+}
+.main nav .content {
+  width: 100%;
+  margin: 0 auto;
+}
+.main nav .content a {
+  color: white;
+  text-decoration: none;
+  line-height: 50px;
+}
+.main nav .content .left {
+  float: left;
+}
+.main nav .content .right {
+  float: right;
+}
+/*# sourceMappingURL=test1.css.map */
