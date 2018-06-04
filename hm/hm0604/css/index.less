@@ -1,6 +1,14 @@
 @import "common";
+body{
+  padding-top: 105/@rem;
+}
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 999;
   width: 100%;
   height: 105/@rem;
   text-align: center;
@@ -60,6 +68,97 @@
 }
 
 .messages {
-  width: 100%
 
+  width: 100%;
+  .msg {
+    width: 100%;
+    height: 138/@rem;
+    border-top: 1/@rem solid #eeeeee;
+    border-bottom: 1/@rem solid #eeeeee;
+    padding: 17/@rem 25/@rem;
+
+    .msg_from {
+      float: left;
+      background: url("../img/QQ_r6_c2.jpg") no-repeat;
+      width: 105/@rem;
+      height: 105/@rem;
+      background-size: cover;
+    }
+  }
+  .msg_detail {
+    height: 105/@rem;
+    width: 535/@rem;
+    float: left;
+    padding: 13/@rem 40/@rem 13/@rem 22/@rem;
+    span {
+      display: block;
+    }
+    span:nth-child(1) {
+      font-size: 30/@rem;
+      padding-bottom: 10/@rem;
+    }
+    span:nth-child(2) {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      color: #898989;
+      font-size: 26/@rem;
+    }
+  }
+  .msg_property {
+    float: left;
+    padding-top: 15/@rem;
+    width: 60/@rem;
+    height: 105/@rem;
+    span:nth-child(1) {
+      display: block;
+      color: #898989;
+    }
+    span:nth-child(2) {
+      display: none;
+
+    }
+    .nums{
+      display: block!important;
+      background-color: #F84D33;
+      color: white;
+      text-align: center;
+      width: 55/@rem;
+      margin-top: 10/@rem;
+      margin-left: 7/@rem;
+      border-radius: 20/@rem;
+    }
+  }
+}
+
+.footer{
+  display: grid;
+  position: fixed;
+
+  z-index: 999;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 112/@rem;
+  border-top: 1/@rem solid #ccc;
+  background-color: white;
+  grid-template-columns: repeat(3, 1fr);
+
+  .option{
+    padding-top: 12/@rem;
+    a{
+      display: block;
+      width: 62/@rem;
+      margin: 0 auto;
+      img{
+        width: 100%;
+      }
+      span{
+        margin-top: -6/@rem;
+        display: block;
+        text-align: center;
+        color: #898989;
+      }
+    }
+  }
 }
