@@ -1,4 +1,50 @@
 /* 这是注释 */
+/* 重置样式 */
+html,
+body,
+ul,
+li,
+img,
+p,
+form,
+input {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+input {
+  outline: none;
+  border: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clear::after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
 .button:nth-child(1) {
   background-color: #000000;
   height: 40px;
