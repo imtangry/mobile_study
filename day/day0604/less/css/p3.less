@@ -1,0 +1,41 @@
+@color:#3c9bbb;
+@border:1px solid;
+//简单混合
+.dcs{
+  float: left;
+  margin-left: 1%;
+  margin-bottom: 1%;
+}
+
+//带参混合
+.dcss(@height){
+  height: @height;
+  border: @border @color ;
+  .dcs;
+}
+//带参混合(包括默认值)
+.dcsss(@h:100px;@fw:@border;@fc:@color){
+  height: @h;
+  border: @fw @fc ;
+  .dcs;
+}
+.d1{
+  width: 20%;
+ .dcss(150px);
+}
+.d2{
+  width: 30%;
+  .dcss(150px);
+}
+.d3{
+  width: 24%;
+  .dcsss();
+}
+.d4{
+  width: 18%;
+  .dcsss(100px;2px solid;#BB4D46);
+}
+.d5{
+  width:45%;
+  .dcss(43px);
+}

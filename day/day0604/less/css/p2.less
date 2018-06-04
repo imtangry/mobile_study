@@ -1,0 +1,23 @@
+@width:150px;
+@height:60px;
+@bgc:#3c9bbb;
+.d1{
+  border: 2px solid #2f5378;
+  margin-bottom: 10px;
+  width: @width;
+  height: @height;
+  background-color: @bgc;
+}.d2{
+  border: 2px solid #184b2a;
+  margin-bottom: 10px;
+  width: @width;
+  height: @height;
+  background-color: #683c4d;
+}
+.temp{
+  @a:10px;
+}
+.d1{
+  //变量的作用域，会报错
+  //margin-top: @a;
+}
