@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var pxRatio=1/window.devicePixelRatio;
+        var html = document.documentElement;
+        //alert(html.clientWidth);
+        document.write('<meta name="viewport" ' +
+            'content="width=device-width,user-scalable=no,' +
+            'initial-scale='+pxRatio+',maximum-scale='+pxRatio+',' +
+            'minimum-scale='+pxRatio+'">');
+        html.style.fontSize=html.clientWidth/25+"px";
+        // alert(html.clientWidth);
+    </script>
+    <link rel="stylesheet" href="./css/index.css">
+    <title>rem练习</title>
+</head>
+<body>
+<header class="header">
+    <div class="back_btn">
+        <i></i>
+    </div>
+    <div class="sign_out">
+        <span>退出</span>
+        <i>&nbsp;</i>
+    </div>
+</header>
+</body>
+</html>
