@@ -1,12 +1,24 @@
+.header{
+    height: 60px;
+    background-color: #FF4502;
+    line-height: 60px;
+    color: white;
+}
 
-
-
-
-
-
-
-
-
+.header>.brand{
+    font-size: 24px;
+}
+.header .h_nav{
+    overflow: hidden;
+ }
+.header .h_nav>li{
+    float: left;
+    margin-right: 5px;
+    font-size: 12px;
+}
+.header .h_nav>li>a{
+ color: white;
+}
 
 .login{
     padding: 60px 0 80px;

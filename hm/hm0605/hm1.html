@@ -5,37 +5,53 @@
     <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <title>登录淘宝</title>
     <style>
-        /*ul{*/
-        /*list-style: none;*/
-        /*padding: 0;*/
-        /*}*/
-        /*a{*/
-        /*color: #444444;*/
-        /*}*/
-        /*a:hover{*/
-        /*text-decoration: none;*/
-        /*}*/
+        ul{
+        list-style: none;
+        padding: 0;
+        }
+        a{
+        color: #444444;
+        }
+        a:hover{
+        text-decoration: none;
+        }
     </style>
     <link rel="stylesheet" href="./css/hm1.css">
 </head>
 <body>
+<header class="header">
+    <div class="col-xs-offset-1 col-xs-4 brand">我的淘宝</div>
+    <div class="col-xs-offset-2">
+        <ul class="h_nav">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">我的购物车</a></li>
+            <li><a href="#">卖家中心</a></li>
+            <li><a href="#">商品分类</a></li>
+            <li><a href="#">联系客服</a></li>
+            <li><a href="#">网址导航</a></li>
+        </ul>
+    </div>
 
+</header>
 
 <div class="contanier login">
     <form class="form-horizontal">
 
         <div class="form-group">
             <h4 class="col-xs-offset-2">管理员登录</h4>
+
             <div class="col-xs-8 col-sm-6  col-xs-offset-2 input-group">
                 <span class="input-group-addon glyphicon glyphicon-user"></span>
                 <input type="email" class="form-control" id="inputEmail3" placeholder="username">
             </div>
+
+
         </div>
 
 
         <div class="form-group">
             <div class="col-xs-8 col-sm-6 col-xs-offset-2 input-group">
-                <span class="input-group-addon ">@</span>
+                <span class="input-group-addon glyphicon glyphicon-lock"></span>
                 <input type="password" class="form-control" id="inputPassword3" placeholder="password">
             </div>
         </div>
