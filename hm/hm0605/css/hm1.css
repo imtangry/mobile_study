@@ -18,9 +18,17 @@
     color: white;
     background-color: #FF4502;
 }
-.login_btn div{
+.login_btn>div{
     padding-left: 0!important;
     margin-top: 10px;
+}
+.login_btn>div>button{
+    color: white;
+    background-color:#FF4502;
+}
+.login_btn>div>button:hover{
+    color: white;
+    background-color: #ff581a;
 }
 
 .footer{
