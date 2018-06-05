@@ -172,6 +172,32 @@
             </div>
         </div>
     </div>
+
+    <script src="./js/zepto/zepto.min.js"></script>
+    <script src="./js/zepto/touch.js"></script>
+    <script src="./js/zepto/selector.js"></script>
+
+
+    <!--使用zepto实现触摸事件-->
+    <script !src="">
+        $(".jd_nav>.jd_nav_ul>.jd_nav_item>a").on("tap",function () {
+            console.log("触摸事件");
+        })
+
+        $(function(){
+            var banner = $(".jd_banner");
+            var banner_width = banner.width();
+            var img_box = banner.find("ul:first-of-type");
+            var indicator = banner.find("ul:eq(1)");
+            var first = img_box.find("li:first-of-type");
+            var last = img_box.find("li；last-of-type");
+            img_box.append(first.clone());
+            last.clone().insertBefore(first);
+        })
+
+
+
+    </script>
 </body>
 
 </html>
