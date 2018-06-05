@@ -1,3 +1,32 @@
-.footer{
 
+
+
+
+
+
+
+
+
+
+.login{
+    padding: 60px 0 80px;
+}
+.login h4{
+    /*padding-left: 20px;*/
+}
+.login .input-group-addon{
+    color: white;
+    background-color: #FF4502;
+}
+.login_btn div{
+    padding-left: 0!important;
+    margin-top: 10px;
+}
+
+.footer{
+    color: white;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background-color: #FF4502;
 }
