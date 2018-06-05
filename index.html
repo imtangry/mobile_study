@@ -54,16 +54,16 @@
                     <img src="./img/lun/a6.jpg.dpg.webp" alt="">
                 </a>
             </li>
-            <!--<li>-->
-                <!--<a href="#">7-->
-                    <!--<img src="./img/lun/a7.jpg.dpg.webp" alt="">-->
-                <!--</a>-->
-            <!--</li>-->
-            <!--<li>-->
-                <!--<a href="#">8-->
-                    <!--<img src="./img/lun/a4.jpg.dpg.webp" alt="">-->
-                <!--</a>-->
-            <!--</li>-->
+            <li>
+                <a href="#">7
+                    <img src="./img/lun/a7.jpg.dpg.webp" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">8
+                    <img src="./img/lun/a4.jpg.dpg.webp" alt="">
+                </a>
+            </li>
         </ul>
         <!-- <div class="flex_content"> -->
         <ul class="jd_banner_pointer">
@@ -189,17 +189,19 @@
         var banner = $(".jd_banner");
         var banner_width = banner.width();
         var img_box = banner.find("ul:first-of-type");
-        var indicator = banner.find("ul:eq(1)");
+        var pointers = banner.find("ul:eq(1)").find("li");
         var first = img_box.find("li:first-of-type");
-        var last = img_box.find("li；last-of-type");
+        var last = img_box.find("li:last-of-type");
+        // 头尾加一个图片，防止循环轮播出现空白，那么样式需要改一下下
         img_box.append(first.clone());
         last.clone().insertBefore(first);
-        // 图片索引
-        var index =0;
+        // 图片索引，因为第一张图片是复制的，所以从1开始
+        var index =1;
         var list = img_box[0].getElementsByTagName("li").length;
+        img_box.css("left", -index * banner_width);
         var timer;
         console.log(list);
-
+        console.log(pointers);
         function turn() {
 
             // if (index == list) {
@@ -210,30 +212,40 @@
             // img_box.animate(
             //     {"left": -index * banner_width}, 200, "ease-in-out", function () {
             // })
+
             img_box.animate({"left": -index * banner_width}, 200, "ease-in-out", function () {
-                if (index == list - 1) {
+                
+                // 动画完结时执行判断，可以包含自动轮播，滑动的情况
+                if (index == list-1) {
                     index = 1;
                     img_box.css("left", -index * banner_width);
                 } else if (index == 0) {
-                    index = list - 2;
+                    index = list-2;
                     img_box.css("left", -index * banner_width);
                 }
+                pointers[index-1].classList.add("active");
             })
         }
 
         timer = setInterval(function () {
+            pointers[index-1].classList.remove("active");
             index++;
+            // pointers[index-1].classList.add("active");
             turn();
         }, 2000);
 
         img_box.on("swipeLeft", function () {
             clearInterval(timer);
+            pointers[index-1].classList.remove("active");
             index++;
+            // pointers[index-1].classList.add("active");
             turn();
         })
         img_box.on("swipeRight", function () {
             clearInterval(timer);
+            pointers[index-1].classList.remove("active");
             index--;
+            // pointers[index-1].classList.add("active");
             turn();
         })
     })

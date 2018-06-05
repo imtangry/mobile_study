@@ -78,12 +78,12 @@ body {
 .jd_banner_imgs {
     position: relative;
 
-    width: 800%;
+    width: 1000%;
 }
 
 /* 每个图占容器的八分之一 */
 .jd_banner_imgs > li {
-    width: 12.5%;
+    width: 10%;
     float: left;
 }
 

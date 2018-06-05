@@ -1,0 +1,29 @@
+.d1{
+    height: 200px;
+    margin: 1%;
+    float: left;
+    background-color: #3c9bbb;
+}
+@media screen and (max-width: 768px) {
+    .d1{
+        width: 98%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .d1{
+        width: 48%;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .d1{
+        width: 31%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .d1{
+        width: 23%;
+    }
+}
