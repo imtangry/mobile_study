@@ -76,6 +76,8 @@ body {
 
 /* 容器中图片有八张，每张占满轮播图模块(屏幕) */
 .jd_banner_imgs {
+    position: relative;
+
     width: 800%;
 }
 
