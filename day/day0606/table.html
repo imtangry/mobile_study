@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单修改</title>
+</head>
+<link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<style>
+    .container {
+        margin-top: 50px;
+    }
+
+    .info > span {
+        cursor: pointer;
+    }
+
+    .info > span:hover {
+        color: #2aabd2;
+    }
+</style>
+<body>
+
+
+<div class="container">
+
+    <table class="table table-bordered text-center">
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>薪资</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+
+        <tr>
+            <td class="active">1</td>
+            <td>Tom</td>
+            <td>25</td>
+            <td>14000</td>
+            <td class="info"><span>修改</span></td>
+        </tr>
+        <tr>
+            <td class="active">2</td>
+            <td>Kat</td>
+            <td>21</td>
+            <td>15000</td>
+            <td class="info"><span>修改</span></td>
+        </tr>
+        <tr>
+            <td class="active">3</td>
+            <td>Lily</td>
+            <td>24</td>
+            <td>24000</td>
+            <td class="info"><span>修改</span></td>
+        </tr>
+
+    </table>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">修改信息</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">姓名</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="age" class="col-sm-2 control-label">年龄</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="age">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="salary" class="col-sm-2 control-label">薪资</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="salary">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="modify">确认修改</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./js/jquery/jquery-3.3.1.min.js"></script>
+<script src="./js/bootstrap/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        var that;
+        $(".info>span").click(function (e) {
+            var modal = $("#myModal");
+            modal.modal('toggle');
+            that =$(this);
+            console.log($("table tr").eq(1));
+            $("#name").val($(this).parent().siblings('td').eq(1).text());
+            $("#age").val($(this).parent().siblings("td").eq(2).text());
+            $("#salary").val($(this).parent().siblings("td").eq(3).text());
+        })
+        $("#modify").click(function (e) {
+            var modal = $("#myModal");
+            // console.log(that.parent().siblings('td').eq(1));
+            that.parent().siblings('td').eq(1).text($("#name").val());
+            that.parent().siblings("td").eq(2).text($("#age").val());
+            that.parent().siblings("td").eq(3).text($("#salary").val());
+            modal.modal('toggle');
+        })
+    })
+</script>
+</body>
+</html>
