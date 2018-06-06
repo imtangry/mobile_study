@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  > .dropdown {
+    > .btn-default {
+      background-color: white !important;
+      color: #6c6c6c !important;
+      border-color: white !important;
+      box-shadow: none;
+      >.d{
+        font-size: 12px;
+      }
+      &:hover > .d {
+        color: #f40;
+      }
+      &:hover {
+        border-left-color: #ddd !important;
+        border-right-color: #ddd !important;
+      }
+
+    }
+    > .btn {
+      outline: none !important;
+      border-radius: 0;
+      > .glyphicon {
+        top: 2px;
+        font-size: 10px;
+      }
+    }
+    > .dropdown-menu {
+      border: 1px solid #ddd;
+      border-top: none;
+      margin-top: 0;
+      border-radius: 0;
+      box-shadow: none;
+      > li {
+        padding: 2px 0 2px 12px;
+        > a {
+          font-size: 12px;
+          color: #6c6c6c;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
