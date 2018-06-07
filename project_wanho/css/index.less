@@ -1,0 +1,67 @@
+@color: #e92322;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*头部样式*/
+.wan_header {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  .row {
+    height: 100%;
+    border: 1px solid #ccc;
+    > div:nth-of-type(-n+3) {
+      border-right: 1px solid #ccc;
+      > .wan_code {
+        position: relative;
+        display: block;
+        > img {
+          display: none;
+          position: absolute;
+          border: 1px solid #ccc;
+          top: 50px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        &:hover {
+          img {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.wan_nav {
+
+  .navbar-brand {
+    height: 80px;
+    color: black;
+    line-height: 50px;
+    .glyphicon-fire {
+      color: red;
+      font-size: 24px;
+      padding-right: 10px;
+    }
+  }
+  .navbar-nav {
+    font-size: 16px;
+
+    > li > a {
+      line-height: 50px;
+      height: 80px;
+    }
+    > li > a:hover, a:focus {
+      border-bottom: 3px solid red;
+    }
+    > .active>a {
+      border-bottom: 3px solid red;
+    }
+  }
+  .navbar-toggle {
+    margin-top: 22px;
+  }
+}
