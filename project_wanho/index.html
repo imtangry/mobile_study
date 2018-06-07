@@ -75,28 +75,36 @@
     </nav>
 </nav>
 
-
-
 <!--轮播图-->
 <section class="wan_banner container ">
 
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
+
         <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
             <li data-target="#carousel-example-generic" data-slide-to="1"></li>
         </ol>
         <!-- Wrapper for slides -->
+
+
         <div class="carousel-inner" role="listbox">
-            <div class="item active mobile_img">
 
-                <img src="./img/a1.jpg" alt="...">
+            <div class="item active" data-large-img="img/a2_2.jpg" data-small-img="img/a1.jpg">
+                <!--<a href="#" class="mobile_img hidden-sm hidden-lg hidden-md">-->
+                <!--<img src="./img/a1.jpg" alt="...">-->
+                <!--</a>-->
+                <!--<a href="#" class="pc_img hidden-xs " style="background: url('./img/a2_2.jpg') center"></a>-->
             </div>
-            <div class="item mobile_img">
-                <img src="./img/a2.jpg" alt="...">
+
+            <div class="item"  data-large-img="img/a1_2.jpg" data-small-img="img/a2.jpg">
+                <!--<a href="#" class="mobile_img hidden-sm hidden-md hidden-lg">-->
+                <!--<img src="./img/a2.jpg" alt="...">-->
+                <!--</a>-->
+                <!--<a href="#" class="pc_img hidden-xs " style="background: url('./img/a1_2.jpg') center"></a>-->
             </div>
+
         </div>
-
         <!-- Controls -->
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -109,11 +117,68 @@
     </div>
 </section>
 
-
-
-
 <!--信息-->
-<section class="wan_info"></section>
+<section class="wan_info hidden-xs">
+    <div class="container">
+        <div class="row">
+            <div class="media"></div>
+            <div class="col-sm-6 col-md-4 media">
+                <div class="media-left">
+                <span class="glyphicon glyphicon-hand-right"></span>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">设计类课程</h4>
+                    <p>高质量教学，优质服务</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 media">
+                <div class="media-left">
+                    <span class="glyphicon glyphicon-hand-right"></span>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">设计类课程</h4>
+                    <p>高质量教学，优质服务</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 media">
+                <div class="media-left">
+                    <span class="glyphicon glyphicon-hand-right"></span>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">设计类课程</h4>
+                    <p>高质量教学，优质服务</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 media">
+                <div class="media-left">
+                    <span class="glyphicon glyphicon-hand-right"></span>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">设计类课程</h4>
+                    <p>高质量教学，优质服务</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 media">
+                <div class="media-left">
+                    <span class="glyphicon glyphicon-hand-right"></span>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">设计类课程</h4>
+                    <p>高质量教学，优质服务</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 media">
+                <div class="media-left">
+                    <span class="glyphicon glyphicon-hand-right"></span>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">设计类课程</h4>
+                    <p>高质量教学，优质服务</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!--内容块-->
 <section class="wan_content"></section>
 <!--学习方法-->
@@ -121,8 +186,8 @@
 <!--尾部块-->
 <footer class="footer"></footer>
 
-
 <script src="bootstrap/js/jquery-3.3.1.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="./js/complex_withjs.js"></script>
 </body>
 </html>

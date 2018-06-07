@@ -19,8 +19,6 @@ $(function () {
             })
         }
     }).trigger('resize');
-
-
     var c = $(".carousel")[0];
     // var ci = $(".carousel-inner")[0];
     var sx = 0;
