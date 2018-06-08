@@ -108,31 +108,35 @@ body {
 .wan_content {
   > .container {
     background-color: #eee;
-    > .nav-tabs {
-      > li {
-        > a {
-          line-height: 50px;
-          border-radius: 0;
-          border: none;
-          font-size: 16px;
-          background-color: transparent;
-
-        }
-        > a:hover {
-          border-bottom: 3px solid red;
-
-        }
-        &.active {
+    > .wrapper {
+      width: 100%;
+      height: 80px;
+      overflow: hidden;
+      > .nav-tabs {
+        > li {
           > a {
-            border-bottom: 3px solid red;
-          }
+            line-height: 50px;
+            border-radius: 0;
+            border: none;
+            font-size: 16px;
+            background-color: transparent;
 
+          }
+          > a:hover {
+            border-bottom: 3px solid red;
+
+          }
+          &.active {
+            > a {
+              border-bottom: 3px solid red;
+            }
+
+          }
         }
       }
     }
     > .tab-content {
       margin: 20px 0;
-
 
       .wan-pBox {
         margin: 20px 0;
@@ -180,8 +184,8 @@ body {
             bottom: 0;
           }
         }
-        &:after,&:before{
-          content:"";
+        &:after, &:before {
+          content: "";
           position: absolute;
           width: 14px;
           height: 14px;
@@ -190,23 +194,20 @@ body {
           right: 92px;
           z-index: 999;
         }
-        &:after{
+        &:after {
           bottom: -7px;
         }
-        &:before{
+        &:before {
           top: -7px;
         }
       }
 
-
-
-
       .active {
         color: white;
-        >.wan_left {
+        > .wan_left {
           background-color: red;
         }
-        >.wan_right {
+        > .wan_right {
           background-color: red;
           > b {
             color: white;
@@ -215,5 +216,105 @@ body {
       }
     }
   }
+}
 
+.wan_method {
+  .title {
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid #aaa;
+    &:after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      right: -8px;
+      bottom: -4px;
+      border-radius: 50%;
+      background-color: #3c9bbb;
+    }
+  }
+
+  .nav-tabs {
+    .wan_line{
+      position: absolute;
+      top: 0;
+      left: 45px;
+      height: 320px;
+      border-left: 1px dashed red;
+    }
+
+
+
+
+
+    > li {
+        margin-bottom: 30px;
+      > a {
+        color: red;
+        background-color: #ccc;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: none;
+      }
+      > a:hover {
+        border: none;
+        background-color: red;
+        color: white;
+      }
+      &.active {
+        > a, a:hover, a:focus {
+          color: white;
+          border: none;
+          background-color: red;
+        }
+
+      }
+
+      .wan_icon1 {
+        font-size: 30px;
+       line-height: 36px;
+      }
+
+    }
+
+    @media screen and(min-width:768px) and (max-width: 992px){
+      >li{
+        margin-right: 30px;
+        margin-bottom: 0;
+      }
+    }
+    @media screen and (max-width: 768px){
+      >li{
+        margin-right: 0;
+        margin-bottom: 0;
+        width: 25%;
+      }
+    }
+
+
+
+
+
+  }
+
+  .tab-content{
+    ul{
+      list-style:none;
+      li{
+          padding: 10px 0;
+        font-size: 16px;
+      }
+    }
+  }
+
+}
+
+
+.footer{
+  height: 60px;
+  background-color: #aaaaaa;
+  text-align: center;
+  line-height: 60px;
 }

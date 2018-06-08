@@ -36,4 +36,17 @@ $(function () {
     })
 
 
+    // 内容块的宽度
+    var ul=$('.wan_content .nav-tabs');
+    var list = ul.find("li");
+    var totalW=0;
+    list.each(function (index,value) {
+        totalW = totalW+$(value).innerWidth;
+
+    })
+ul.width(innerWidth);
+    var m = new IScroll('.wrapper',{
+        scrollX:true,scrollY:false
+    })
+
 })
