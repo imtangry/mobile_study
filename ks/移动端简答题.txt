@@ -1,0 +1,217 @@
+简单题：
+
+1 pc端与移动端的区别？
+1)pc端：浏览器的兼容性
+
+	移动开发：手机兼容
+
+
+手机分辨率的适配和不同操作系统差异化
+
+
+2) 事件处理：手机：触屏事件   pc:点击事件
+
+
+3) 布局：pc：固定像素布局
+
+	移动：流式布局和rem布局
+
+
+4) 动画：pc: js或jquery
+
+		移动：css3
+
+
+5) pc: jquery
+
+	    移动：zepto
+
+
+2 viewport的作用？
+默认的viewport大于屏幕的窗口，为了保证手机屏幕不出现横向滚动条，要通过
+
+<meta name="viewport" content="">进行控制，来改变layout view的宽度
+
+<meta name="viewport" content="width=device-width" >
+
+控制缩放：
+
+
+initial-scale=1:
+
+允许用户的最大的缩放值： maximum-scale=1.0
+
+允许用户的最大小缩放值： minimum-scale=1.0
+
+设置是否允许用户缩放：user-scalable=no,
+
+
+3 移动端有哪些布局方式可以适应不同屏幕?
+流式布局
+rem布局
+响应式布局
+
+4 box-sizing:中的border-box与content-box的区别？
+
+通常在页面布局中，需要设定元素的宽高，但由于某些历史原因，不同浏览器对于开发者设定的元素宽高有不同的解析方式
+
+　　在IE中（也就是怪异模式），块元素的width = content + padding + border；比如设定元素width = 100px，padding = 10px，那么实际的内容区域宽度为100-10*2px，也就是固定宽度后，如果设定border或者padding会压缩内容区的宽度；
+
+　　在W3C标准中，元素的width = content，比如设定元素width = 100px，padding = 10px，那么实际内容宽度就为100px；整个元素的宽度为100+10*2px，也就是设定额外的padding或border会向外扩张元素的大小；
+
+在实际的开发中，为保持浏览器的兼容性，通常将盒子模型统一为IE的盒子模型，并且这样的方式有利于布局
+
+　　转换的方式为：box-sizing: border-box; 另外box-sizing属性还有inherit和content-box两个值，后者即为W3C盒子模型
+
+5 移动端常见的触屏事件有哪些？它们的含义分别是什么？
+触屏事件，有touchstart touchmove touchend touchcancel
+ 四种之分
+
+touchstart：手指触摸到屏幕会触发
+
+touchmove：当手指在屏幕上移动时，会触发
+
+touchend：当手指离开屏幕时，会触发
+
+touchcancel：可由系统进行的触发，比如手指触摸屏幕的时候，突然alert了一下，或者系统中其他打断了touch的行为，则可以触发该事件
+
+6 移动端的事件对象的有哪些？它们的含义分别是什么？
+touches targetTouches  changedTouches
+1、touches
+当前位于屏幕上，所有手指的列表
+
+2、targetTouches
+位于当前DOM元素上的手指列表
+
+3、changedTouches（常用）
+涉及当前事件的手指的列表
+
+7 css中的长度单位em与rem有什么区别？
+
+em:是一种长度单位，它是参照当前元素的字号，如果没有设置，就参照父容器或者当前浏览器的默认字号。
+
+rem:是css3新增的长度单位，它是参照根元素(html)的字号
+
+
+8 css3中的transform允许对元素做哪些2D的操作？
+1)translate()函数：变换元素在水平和垂直偏移！
+2)scale()函数： 水平和垂直的缩放
+3)rotate()函数：旋转元素
+4)skew()函数：元素水平垂直方向倾斜
+
+9 h5中语义化标签有哪些，并写出相应的含义？
+<header>
+
+<header>元素描述了文档的头部区域
+
+<nav>
+
+标签定义导航链接的部分。
+
+<section>
+
+<section> 标签定义文档中的节（section、区段）。比如章节、页眉、页脚或文档中的其他部分。
+
+<article>
+
+<article> 标签定义独立的内容。
+
+<aside>
+
+<aside> 标签定义页面主区域内容之外的内容（比如侧边栏）。
+
+<figcaption>
+
+<figcaption> 标签定义 <figure> 元素的标题.
+
+<figcaption>元素应该被置于 "figure" 元素的第一个或最后一个子元素的位置。
+
+<figure>
+
+<figure>标签规定独立的流内容（图像、图表、照片、代码等等）。
+
+<footer>
+
+<footer> 元素描述了文档的底部区域.
+
+10  将less文件解析为css文件，有哪几种方式？
+1)直接引入less.js
+2)npm安装的less,通过lessc
+3)在webstorm中实现文件监测
+
+11  bootstrap是什么？为什么使用bootstrap
+
+1） Bootstrap 是当下最流行的前端框架（界面工具集）；
+2）特点就是灵活简洁，代码优雅，美观大方；
+3）其目的是为了让 Web 开发更敏捷；
+
+
+为什么使用Bootstarp？
+
+1） 生态圈火，不断地更新迭代；
+2）提供一套美观大方地界面组件；
+3 提供一套优雅的 HTML+CSS 编码规范；
+4）让我们的 Web 开发更简单，更快捷；
+
+12 什么是响应式布局？
+响应式布局就是网页能够响应各种各样不同分辨率大小的设备，能够将网页很好的呈献给用户
+
+13 bootstrap的栅格布局的原理及实现方式？
+Bootstrap内置了一套响应式、移动设备优先的流式栅格系统，随着屏幕设备或视口（viewport）尺寸的增加，系统会自动分为最多12列。
+Bootstrap中的栅格系统叫做布局。它就是通过一系列的行（row）与列（column）的组合创建页面布局，然后你的内容就可以放入到你创建好的布局当中。
+
+网格系统的实现原理非常简单，仅仅是通过定义容器大小，平分12份(也有平分成24份或32份，但12份是最常见的)，再调整内外边距，最后结合媒体查询，就制作出了强大的响应式网格系统
+
+使用规则：
+1、数据行(.row)必须包含在容器（.container）中，以便为其赋予合适的对齐方式和内距(padding)。
+2、在行(.row)中可以添加列(.column)，但列数之和不能超过平分的总列数，
+3 具体内容应当放置在列容器（column）之内，而且只有列（column）才可以作为行容器(.row)的直接子元素
+
+14 css中的媒体查询的作用是什么，在css中如何使用媒体查询？
+1）作用：
+CSS3媒体查询，就是根据页面分辨率设置不同的css样式，达到自适应的目的
+2）使用：
+使用 @media 查询，你可以针对不同的媒体类型定义不同的样式。
+
+@media mediatype and|not|only (media feature) {
+    CSS-Code;
+}
+15 h5中的sessionStorage 与localStorage 的区别？
+localStorage的生命周期是永久性的。假若使用localStorage存储数据，即使关闭浏览器，也不会让数据消失，除非主动的去删除数据
+ sessionStorage 的生命周期是在浏览器关闭前。也就是说，在整个浏览器未关闭前，其数据一直都是存在的
+
+
+16 jquery中innerwidth，outerwidth和width的区别？
+在jQuery中，width()方法用于获得元素宽度；innerWidth()方法用于获得包括内边界（padding）的元素宽度，outerWidth()方法用于获得包括内边界(padding)和边框(border)的元素宽度，如果outerWidth()方法的参数为true则外边界(margin)也会被包括进来，即获得包括外边框(margin)、内边界(padding)和边框(border)的元素宽度。同理，innerHeight方法与outerHeight方法也是用同样的方法计算相应的高度。
+
+17 data属性的作用是什么？
+data-为前端开发都提供自定义的属性，这些属性集可以通过对象的dataset属性获取，不支持该属性的浏览器可以通过getAttribute方法获取
+
+
+18 git的功能特性有哪些？
+Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
+Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。
+1、从服务器上克隆数据库（包括代码和版本信息）到单机上。
+2、在自己的机器上创建分支，修改代码。
+3、在单机上自己创建的分支上提交代码。
+4、在单机上合并分支。
+5、新建一个分支，把服务器上最新版的代码fetch下来，然后跟自己的主分支合并。
+6、生成补丁（patch），把补丁发送给主开发者。
+7、看主开发者的反馈，如果主开发者发现两个一般开发者之间有冲突（他们之间可以合作解决的冲突），就会要求他们先解决冲突，然后再由其中一个人提交。如果主开发者可以自己解决，或者没有冲突，就通过。
+8、一般开发者之间解决冲突的方法，开发者之间可以使用pull 命令解决冲突，解决完冲突之后再向主开发者提交补丁。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
