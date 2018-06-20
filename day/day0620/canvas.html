@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .d1 {
+            border: 1px solid #3732a6;
+        }
+    </style>
+</head>
+<body>
+<canvas class="d1" width="300" height="300"></canvas>
+<script>
+    var eleee = document.getElementsByClassName("d1")[0];
+    var y = 0;
+    var x = 0;
+    var context = eleee.getContext("2d");
+
+
+    // context.moveTo(x, y);
+    // // context.lineTo(100, 100);
+    // // context.strokeStyle = "#36b5f3";
+    // // context.stroke();
+
+    // 描绘一个函数的图像
+    // while (x < 300) {
+    //     x += 0.1;
+    //     y = -Math.pow((x - 150) / 9, 2) + 300;
+    //     // console.log("x:"+x+" y:"+y);
+    //     context.lineTo(x, y);
+    //     context.strokeStyle = "#36b5f3";
+    //     context.stroke();
+    //     context.moveTo(x, y);
+    // }
+    var tiimer = setInterval(function () {
+        if(x>300){
+            clearInterval(tiimer);
+        }
+        x += 0.1;
+        y = -Math.pow((x - 150) / 9, 2) + 300;
+        // console.log("x:"+x+" y:"+y);
+        context.lineTo(x, y);
+        context.strokeStyle = "#36b5f3";
+        context.stroke();
+        context.moveTo(x, y);
+    },5)
+
+    // context.moveTo(0, 0);
+    // context.lineTo(150, 150);
+    // context.strokeStyle = "#f36759";
+    // context.stroke();
+
+
+    // // 这个控制填充和描边字体的阴影
+    // context.shadowColor = "#ffc5ed";
+    // context.shadowOffsetX = 5;
+    // context.shadowOffsetY = 5;
+    // context.shadowBlur = 10;
+    // // 设置填充字体的颜色
+    // context.fillStyle = "#97c3cc";
+    // // 这个会控制描边和填充的字体大小
+    // context.font = "bold 50px 微软雅黑";
+    // // 字体填充
+    // context.fillText("你好啊", 20, 50);
+    //
+    // // 这个用于描边
+    // context.lineWidth = 1;
+    // // 设置描边字体的颜色
+    // context.strokeStyle = "#5cccc5";
+    // context.strokeText("你好啊！", 22, 50);
+
+    // var img = new Image();
+    //  img.src="./public/img/m_img/head1.jpg";
+    //  img.onload= function () {
+    //      context.drawImage(img,20,20,100,100);
+    //  }
+
+
+</script>
+</body>
+</html>

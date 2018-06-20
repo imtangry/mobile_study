@@ -1,7 +1,6 @@
 var eve = {
     tap: function (ele, fn) {
         // 判断一下
-
         var startX, startY, endX, endY;
         ele.addEventListener("touchstart", function (e) {
             var tt = e.targetTouches;
@@ -16,10 +15,7 @@ var eve = {
 
         ele.addEventListener("touchend", function (e) {
             var ct = e.changedTouches[0];
-
             // 判断点击事时间
-
-
             // 判断手指移动距离
             endX = ct.clientX;
             endY = ct.clientY;
