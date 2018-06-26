@@ -1,0 +1,14 @@
+作业四：
+建立表：
+goods:
+
+	id
+	name
+	price
+	num
+	descp
+
+添加
+删除
+修改
+显示
